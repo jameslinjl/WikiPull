@@ -1,0 +1,13 @@
+javascript:
+
+var str = location.href;
+var tmp = str.split("#");
+str = tmp[0];
+
+var res = str.split("/");
+
+var last = res.length-1;
+
+var search = res[last];
+
+window.location='http://www.google.com/search?q='+search
