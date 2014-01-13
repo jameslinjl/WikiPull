@@ -21,15 +21,31 @@
         <link rel="stylesheet" href="css/main.css">
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
+
+  <script type="text/javascript"
+        src="https://raw.github.com/Stuk/jszip/master/jszip.js"></script>
+
         <script src ="js/vendor/jquery-1.10.1.min.js"></script>
 
         <script type ="text/javascript">
 
 
-var url = "https://en.wikipedia.org/w/api.php?action=query&prop=extlinks&ellimit=200&titles=Xinjiang&format=json"
+var url = "https://en.wikipedia.org/w/api.php?action=query&prop=extlinks&ellimit=200&titles=Xinjiang&format=json";
 
-$.getJSON('https://en.wikipedia.org/w/api.php?action=query&prop=extlinks&ellimit=200&titles=Xinjiang&format=json&callback=?', function(result) {
 
+var str = location.href;
+var res = str.split("?");
+
+var res = res[1].split("/");
+
+console.log(res[0]);
+
+
+
+$.getJSON('https://en.wikipedia.org/w/api.php?action=query&prop=extlinks&ellimit=200&titles='+res[0]+' &format=json&callback=?', function(result) {
+
+
+      console.log(result);
         var t = result.query.pages;
 
         for (var i in t)
