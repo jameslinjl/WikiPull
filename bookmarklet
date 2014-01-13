@@ -10,4 +10,4 @@ var last = res.length-1;
 
 var search = res[last];
 
-window.location='http://www.google.com/search?q='+search
+window.location='localhost:8000?'+search
