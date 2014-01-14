@@ -10,4 +10,4 @@ var last = res.length-1;
 
 var search = res[last];
 
-window.location='localhost:8000?'+search
+window.location='http://localhost:8000?'+search
